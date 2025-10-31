@@ -4058,7 +4058,7 @@ __metadata:
   dependencies:
     "@types/lodash": "npm:^4.17.20"
     "@types/lodash-es": "npm:^4"
-    es-toolkit: "workspace:^"
+    es-toolkit-es5: "workspace:^"
     esbuild: "npm:0.23.0"
     lodash: "npm:^4.17.21"
     lodash-es: "npm:^4.17.21"
@@ -5360,9 +5360,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-toolkit@workspace:., es-toolkit@workspace:^":
+"es-toolkit-es5@workspace:., es-toolkit-es5@workspace:^":
   version: 0.0.0-use.local
-  resolution: "es-toolkit@workspace:."
+  resolution: "es-toolkit-es5@workspace:."
   dependencies:
     "@arethetypeswrong/cli": "npm:^0.15.3"
     "@changesets/changelog-github": "npm:^0.5.0"
@@ -5403,6 +5403,8 @@ __metadata:
     typescript-eslint: "npm:^8.6.0"
     vercel: "npm:^41.4.1"
     vitest: "npm:^2.1.2"
+  peerDependencies:
+    tslib: ^2.6.3
   dependenciesMeta:
     "@trivago/prettier-plugin-sort-imports@4.3.0":
       unplugged: true

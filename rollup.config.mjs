@@ -84,12 +84,12 @@ function libBuildOptions({ entrypoints, extension, format, outDir, sourcemap }) 
       // leading to a result that is a mirror of the input module graph.
       preserveModules: true,
       sourcemap,
-      generatedCode: 'es2015',
       // Hoisting transitive imports adds bare imports in modules,
       // which can make imports by JS runtimes slightly faster,
       // but makes the generated code harder to follow.
       hoistTransitiveImports: false,
     },
+    external: ['tslib'],
   };
 }
 
@@ -129,8 +129,8 @@ function browserBuildConfig({ inputFile, outFile, name, sourcemap }) {
       name,
       file: outFile,
       sourcemap,
-      generatedCode: 'es2015',
     },
+    external: ['tslib'],
   };
 }
 
@@ -159,6 +159,7 @@ function declarationOptions({ entrypoints, outDir }) {
         preserveModulesRoot: 'src',
       },
     ],
+    external: ['tslib'],
   };
 }
 
