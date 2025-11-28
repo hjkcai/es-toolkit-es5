@@ -141,7 +141,7 @@ export function template(string?: string, options?: TemplateOptions, guard?: obj
   let isEvaluated = false;
   let source = `__p += ''`;
 
-  for (const match of string.matchAll(delimitersRegExp)) {
+  for (const match of Array.from(string.matchAll(delimitersRegExp))) {
     const [fullMatch, escapeValue, interpolateValue, esTemplateValue, evaluateValue] = match;
     const { index } = match;
 

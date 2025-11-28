@@ -269,7 +269,7 @@ function isMapMatch(
     return false;
   }
 
-  for (const [key, sourceValue] of source.entries()) {
+  for (const [key, sourceValue] of Array.from(source)) {
     const targetValue = target.get(key);
 
     const isEqual = compare(targetValue, sourceValue, key, target, source, stack);
@@ -359,5 +359,5 @@ export function isSetMatch(
     return false;
   }
 
-  return isArrayMatch([...target], [...source], compare, stack);
+  return isArrayMatch(Array.from(target), Array.from(source), compare, stack);
 }

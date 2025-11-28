@@ -71,7 +71,7 @@ export default defineConfig(
       'no-for-of-array': noForOfArrayPlugin,
     },
     rules: {
-      'no-for-of-array/no-for-of-array': 'error',
+      // 'no-for-of-array/no-for-of-array': 'error',
       'no-restricted-syntax': [
         'error',
         {

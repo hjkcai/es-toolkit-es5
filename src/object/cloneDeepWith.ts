@@ -134,7 +134,7 @@ export function cloneDeepWithImpl<T>(
     const result = new Map();
     stack.set(valueToClone, result);
 
-    for (const [key, value] of valueToClone) {
+    for (const [key, value] of Array.from(valueToClone)) {
       result.set(key, cloneDeepWithImpl(value, key, objectToClone, stack, cloneValue));
     }
 
@@ -145,7 +145,7 @@ export function cloneDeepWithImpl<T>(
     const result = new Set();
     stack.set(valueToClone, result);
 
-    for (const value of valueToClone) {
+    for (const value of Array.from(valueToClone)) {
       result.add(cloneDeepWithImpl(value, undefined, objectToClone, stack, cloneValue));
     }
 

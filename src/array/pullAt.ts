@@ -20,7 +20,7 @@ export function pullAt<T>(arr: T[], indicesToRemove: number[]): T[] {
   const removed = at(arr, indicesToRemove);
   const indices = new Set(indicesToRemove.slice().sort((x, y) => y - x));
 
-  for (const index of indices) {
+  for (const index of Array.from(indices)) {
     arr.splice(index, 1);
   }
 

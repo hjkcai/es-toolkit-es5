@@ -19,5 +19,9 @@ export default defineConfig({
         },
       },
     },
+    alias: {
+      'es-toolkit': 'es-toolkit-es5',
+      'es-toolkit/compat': 'es-toolkit-es5/compat',
+    },
   },
 });

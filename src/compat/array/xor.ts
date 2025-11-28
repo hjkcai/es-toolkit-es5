@@ -33,7 +33,7 @@ export function xor<T>(...arrays: Array<ArrayLike<T> | null | undefined>): T[] {
 
     const itemSet = new Set(toArray(array));
 
-    for (const item of itemSet) {
+    for (const item of Array.from(itemSet)) {
       if (!itemCounts.has(item)) {
         itemCounts.set(item, 1);
       } else {
@@ -44,7 +44,7 @@ export function xor<T>(...arrays: Array<ArrayLike<T> | null | undefined>): T[] {
 
   const result: T[] = [];
 
-  for (const [item, count] of itemCounts) {
+  for (const [item, count] of Array.from(itemCounts)) {
     if (count === 1) {
       result.push(item);
     }

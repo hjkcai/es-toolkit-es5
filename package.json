@@ -1,12 +1,12 @@
 {
-  "name": "es-toolkit",
-  "version": "1.42.0",
+  "name": "es-toolkit-es5",
+  "version": "1.42.1",
   "description": "A state-of-the-art, high-performance JavaScript utility library with a small bundle size and strong type annotations.",
   "homepage": "https://es-toolkit.dev",
-  "bugs": "https://github.com/toss/es-toolkit/issues",
+  "bugs": "https://github.com/hjkcai/es-toolkit-es5/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/toss/es-toolkit.git"
+    "url": "https://github.com/hjkcai/es-toolkit-es5.git"
   },
   "license": "MIT",
   "sideEffects": false,
@@ -54,6 +54,9 @@
     "test": "vitest --coverage --typecheck",
     "transform": "jscodeshift -t ./.scripts/tests/transform-lodash-test.ts $0 && prettier --write $0",
     "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "tslib": "^2.6.3"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.3",

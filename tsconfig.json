@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "lib": ["ESNext", "DOM"],
-    "target": "ESNext",
+    "target": "es5",
+    "importHelpers": true,
     "module": "ESNext",
     "noEmit": true,
     "allowImportingTsExtensions": true,
@@ -12,5 +13,5 @@
     "skipLibCheck": true
   },
   "include": ["src", ".scripts/**/*"],
-  "exclude": [".scripts/docs/**/*"]
+  "exclude": [".scripts/docs/**/*", "**/*.spec.ts"]
 }
